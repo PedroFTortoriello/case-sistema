@@ -1,0 +1,26 @@
+{
+  "name": "case-sistema",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@10.8.1",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "npm run test --workspace api",
+    "dev:web": "npm run dev --workspace web",
+    "build:web": "npm run build --workspace web",
+    "lint:web": "npm run lint --workspace web",
+    "dev:api": "npm run dev --workspace api",
+    "build:api": "npm run build --workspace api",
+    "typecheck:api": "npm run typecheck --workspace api",
+    "test:api": "npm run test --workspace api"
+  },
+  "devDependencies": {
+    "turbo": "^2.6.3"
+  }
+}

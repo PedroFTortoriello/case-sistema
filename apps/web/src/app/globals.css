@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7fafc;
+  --sidebar: #0f2740;
+  --sidebar-hover: #173a5e;
+  --primary: #1e4f80;
+  --primary-light: #2e6aa8;
+  --secondary: #5f7d95;
+  --success: #26b56b;
+  --warning: #f5a623;
+  --danger: #e44f4f;
+  --text-primary: #12263a;
+  --text-secondary: #64748b;
+  --border: #e7eef5;
+  --card: #ffffff;
+}
+
+@theme inline {
+  --color-background: #f7fafc;
+  --color-foreground: #12263a;
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f7fafc;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(30, 79, 128, 0.16);
+  color: #12263a;
+}
+
+input::placeholder {
+  color: #8aa0b5;
+}
+
+button,
+input {
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease,
+    transform 200ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid #1e4f80;
+  outline-offset: 2px;
+}
